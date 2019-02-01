@@ -3,9 +3,8 @@
  */
 public class Calculadora implements iCalculadora {
 
-    Stack stack = new Stack();
     double resultado;
-    
+
     /**
      * Método para hacer la suma de la calculadora
      * @param a double - sumando
@@ -13,10 +12,7 @@ public class Calculadora implements iCalculadora {
      * @return - El resultado de la suma de a y b
      */
     public double sumar(double a, double b){
-        double x = (Double)this.stack.pop();
-        double y = (Double)this.stack.pop();
-        this.resultado = x + y;
-        stack.push(resultado);
+        this.resultado = a + b;
         return this.resultado;
     }
 
@@ -27,10 +23,7 @@ public class Calculadora implements iCalculadora {
      * @return double - El resultado de la resta entre a y b
      */
     public double restar(double a, double b){
-        double x = (Double)this.stack.pop();
-        double y = (Double)this.stack.pop();
-        this.resultado = x - y;
-        stack.push(resultado);
+        this.resultado = a - b;
         return this.resultado;
     }
 
@@ -41,10 +34,7 @@ public class Calculadora implements iCalculadora {
      * @return double - El resultado de la multiplicación entre a y b
      */
     public double multiplicar(double a, double b){
-        double x = (Double)this.stack.pop();
-        double y = (Double)this.stack.pop();
-        this.resultado = x * y;
-        stack.push(resultado);
+        this.resultado = a * b;
         return this.resultado;
     }
 
@@ -55,10 +45,7 @@ public class Calculadora implements iCalculadora {
      * @return double - El resultado de la división entre a y b
      */
     public double dividir(double a, double b){
-        double x = (Double)this.stack.pop();
-        double y = (Double)this.stack.pop();
-        this.resultado = x / y;
-        stack.push(resultado);
+        this.resultado = a / b;
         return this.resultado;
     }
 }
